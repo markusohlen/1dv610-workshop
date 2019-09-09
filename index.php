@@ -14,7 +14,7 @@ $controller = new HangmanController($view, $model);
 $controller->playGame();
 
 $sessionStorage->save($model);
-var_dump($_SESSION);
+// echo var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>

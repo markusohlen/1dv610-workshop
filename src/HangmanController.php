@@ -12,8 +12,8 @@ class HangmanController {
 
     public function playGame() {
         if($this->view->playerGuessed() === true) {
-            $guess = $this->view->getGuess();
-            $this->model->doGuess($guess);
+            $guessedLetter = $this->view->getGuess();
+            $this->model->doGuess($guessedLetter);
         }
     }
 }

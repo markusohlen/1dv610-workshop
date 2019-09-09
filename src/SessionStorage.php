@@ -1,11 +1,14 @@
 <?php
 include_once("Hangman.php");
+
 class SessionStorage {
     
     private $model;
     
     public function save(Hangman $model) {
         $_SESSION["guesses"] = $model->getNumberOfGuesses();
+        $_SESSION["guessedLetters"] = $model->getGuessedLetters();
+        $_SESSION["secretWord"] = $model->getSecretWord();
     }
 
     public function __construct() {
